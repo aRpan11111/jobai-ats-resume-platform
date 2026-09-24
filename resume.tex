@@ -1,0 +1,126 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.9in}
+
+\titleformat{\section}{\vspace{-3pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item \small{#1}
+}
+\renewcommand\labelitemi{--}
+\newcommand{\resumeItemListStart}{
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt]
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeSubheading}[4]{
+\item
+\begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{#1} & \textbf{\small #2} \\
+\textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\begin{document}
+
+\begin{center}
+{\Huge \scshape Aditya Rana} \\ \vspace{2pt}
+\small \faPhone\ +91-9927948621 ~
+\faEnvelope\ \href{mailto:adityaranarana2006@gmail.com}{adityaranarana2006@gmail.com} ~
+\faLinkedin\ \href{https://linkedin.com/in/adityarana05}{linkedin.com/in/adityarana05} ~
+\faGithub\ \href{https://github.com/adityarana121}{github.com/adityarana121}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+Final-year B.Tech CSE (AI \& ML) student with production internship experience building REST APIs and full-stack features. Comfortable working across \textbf{Java, Python, and JavaScript}, with hands-on exposure to \textbf{Spring Boot, FastAPI, PostgreSQL, and JWT-secured services}, plus a working understanding of design patterns, Git-based workflows, and unit/integration testing.
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Graphic Era Deemed to be University}{2022 -- 2026}
+{B.Tech CSE (AI \& ML)}{Dehradun, India}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+{AI Engineer Intern}{March 2026 -- Present}
+{APS Matrix}{}
+\resumeItemListStart
+\resumeItem{Architected and delivered end-to-end full-stack features—including a RAG-based AI Assistant and Global Search—for a production CRM using \textbf{FastAPI} and \textbf{Next.js}.}
+\resumeItem{Developed \textbf{multi-entity global search} across \textbf{12+ entities} (leads, deals, contacts, tickets, tasks) with LLM query parsing, fuzzy expansion, and a \textbf{Next.js} search UI backed by \textbf{MariaDB} and vector stores.}
+\resumeItem{Built a \textbf{real-time speech-to-text pipeline} (Whisper) with lock-free multi-threading; eliminated inference backlog and achieved \textbf{2s latency} as a scalable backend service consumed by the frontend.}
+\resumeItem{Implemented \textbf{JWT authentication} across multiple CRM modules; designed and enforced role-based access control patterns shared across backend and frontend layers.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Idempotent Payment Service \href{https://github.com/adityarana121/Idempotent-Payment-Service}{[Link]}}{}
+{Java 17, Spring Boot, Spring Data JPA, PostgreSQL, JUnit, Mockito, Maven}{}
+\resumeItemListStart
+\resumeItem{Built a \textbf{Spring Boot REST API} for account transfers, using \textbf{pessimistic locking} (\texttt{SELECT FOR UPDATE}) to prevent race conditions on concurrent balance updates and an \textbf{idempotency-key} mechanism to prevent duplicate transaction processing on client retries.}
+\resumeItem{Documented endpoints with \textbf{Swagger/OpenAPI}; used \textbf{Gitflow} branching with peer-reviewed pull requests for feature development.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Customer Support Insight Platform \href{https://github.com/adityarana121/Customer-insight-platform}{[Link]}}{}
+{Python, FastAPI, Groq (LLaMA-3), ChromaDB, Sentence-Transformers, Streamlit, Docker}{}
+\resumeItemListStart
+\resumeItem{Built a \textbf{RAG pipeline} ingesting support tickets into \textbf{ChromaDB}; auto-classified via \textbf{LLaMA-3} with sentiment scoring and \textbf{50K+ embeddings} at \textasciitilde30ms/record.}
+\resumeItem{Exposed \textbf{8 REST API endpoints} via FastAPI with AI-powered reply suggestions; fully \textbf{Dockerized} with a Streamlit analytics dashboard.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt]
+\small{
+\item{\textbf{Languages:} Java, C++, Python, JavaScript, SQL}
+\item{\textbf{Backend:} Spring Boot, Spring Data JPA, FastAPI, Node.js, REST APIs, JWT Auth, WebSockets}
+\item{\textbf{Frontend:} React, Next.js, Tailwind CSS}
+\item{\textbf{Databases:} PostgreSQL, MariaDB, MongoDB, ChromaDB, FAISS}
+\item{\textbf{Testing \& Tooling:} JUnit, Mockito, Git, Gitflow, Maven, Swagger}
+\item{\textbf{DevOps \& Cloud:} Docker, Linux, AWS, Azure, CI/CD, MLflow}
+\item{\textbf{AI/ML:} PyTorch, scikit-learn, HuggingFace, LangChain, LLMs, RAG, Prompt Engineering}
+}
+\end{itemize}
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements \& Certifications}
+\resumeItemListStart
+\resumeItem{Microsoft Certified: \textbf{Azure AI Fundamentals (AI-900)} -- cloud infrastructure \& AI services.}
+\resumeItem{\textbf{Finalist} -- Graphic Era University Hackathon, top team out of \textbf{2000+} participants.}
+\resumeItem{Solved \textbf{400+ DSA} problems on LeetCode/GFG.}
+\resumeItemListEnd
+
+\end{document}

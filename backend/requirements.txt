@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+langchain
+langchain-groq
+chromadb
+rapidfuzz
+pdfplumber
+python-docx
+sqlalchemy
+pymysql
+python-multipart
+python-dotenv
