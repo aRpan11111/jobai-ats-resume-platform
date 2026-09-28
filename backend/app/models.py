@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, Text, ForeignKey, Float, Enum, T
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 import enum
-from database import Base
+from .database import Base
 
 class ApplicationStatus(enum.Enum):
     saved = "saved"

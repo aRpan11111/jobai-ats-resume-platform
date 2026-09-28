@@ -7,7 +7,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env"))
 
-import models, schemas, database, parsing, ai, matching, export
+from . import models, schemas, database, parsing, ai, matching, export
 
 # Create tables
 models.Base.metadata.create_all(bind=database.engine)
@@ -222,7 +222,7 @@ def export_tailored_resume_latex(id: int, db: Session = Depends(database.get_db)
 
 import urllib.request
 import urllib.parse
-from latex_template import json_to_latex
+from .latex_template import json_to_latex
 
 @app.post("/applications/{id}/full-tailor-and-export")
 async def full_tailor_and_export(id: int, db: Session = Depends(database.get_db)):

@@ -37,3 +37,15 @@ resume.pdf
 Thumbs.db
 .vscode/
 .idea/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# ChromaDB / vector store data
+chroma_resumes/
+**/chroma_resumes/
+
+# Generated local files
+*.log
